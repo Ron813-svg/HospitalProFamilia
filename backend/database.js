@@ -1,5 +1,5 @@
-import mongoose, {connect}  from "mongoose";
-import { config  } from "./src/config.js";
+import mongoose, { connect }  from "mongoose"
+import { config  } from "./src/config.js"
 
 mongoose.connect(config.db.URI)
 
@@ -14,4 +14,4 @@ connection.once("disconnect", () => {
 
 connection.once("error", (error) =>{
     console.log("error" + error)
-});
+})

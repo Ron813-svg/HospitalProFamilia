@@ -8,12 +8,7 @@ doctorsControllers.getDoctors = async (req, res) => {
     res.json(doctors)
 }
 
-doctorsControllers.postDoctors = async (req, res) => {
-    const { name , specialty, email, password } = req.body;
-    const newDoctor = new doctorsModels({ name , specialty, email, password })
-    await newDoctor.save()
-    res.json({message: "Doctor Added"})
-}
+
 
 doctorsControllers.updateDoctors =  async (req, res) => {
     const { name , specialty, email, password } = req.body;
